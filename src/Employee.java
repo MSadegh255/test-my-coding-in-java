@@ -1,4 +1,4 @@
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private static int nEmployees;
     private String name;
     
@@ -51,6 +51,14 @@ public class Employee {
     
     public int getBaseSallary() {
         return baseSallary;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        if (this.baseSallary > o.baseSallary) return 1;
+        else if (this.baseSallary < o.baseSallary) return -1;
+        return 0;
+
     }
     
 }

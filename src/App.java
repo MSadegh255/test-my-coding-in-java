@@ -9,9 +9,8 @@ import java.util.Arrays;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        String[] strArray = {"Hi", "Hello"};
-        var list1 = new GenericList<String>(strArray, 2);
+        var controller = GenericList.compare(new Employee(2000, 12), new Controller(3000, 3));
+        System.out.println(controller.getBaseSallary());
 
-        list1.printLength();
     }
 }

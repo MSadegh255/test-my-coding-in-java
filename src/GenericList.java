@@ -7,6 +7,10 @@ public class GenericList<T> {
         this.counter = counter;
     }
 
+    public static <K extends Comparable<K>> K compare(K first, K second) {
+        return (first.compareTo(second) == 1) ? first : second;
+    }
+
     public void add(T a) {
         list[counter++] = a;
     }
