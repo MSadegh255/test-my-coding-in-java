@@ -14,4 +14,8 @@ public class GenericList<T> {
     public T getFromIndex(int index) {
         return list[index];
     }
+
+    public void printLength() {
+        System.out.println(this.list.length);
+    }
 }
